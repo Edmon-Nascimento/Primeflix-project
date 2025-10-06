@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    background-color: #121212;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.favoritos{
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.5s ease;
+}
+
+.favoritos:hover{
+    transform: scale(1.05);
+}
