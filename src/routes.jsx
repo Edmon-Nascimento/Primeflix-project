@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Favoritos from './pages/Favoritos'
 import Filme from './pages/Filme'
+import Error from './pages/Error'
 
 function RoutesApp(){
     return(
@@ -15,6 +16,7 @@ function RoutesApp(){
                 <Route path='/' element={<Home/>}/>
                 <Route path='/favoritos' element={<Favoritos/>}/>
                 <Route path='/filme/:id' element={<Filme/>}/>
+                <Route path='*' element={<Error/>}/>
             </Routes>
         <Footer/>
         </BrowserRouter>

@@ -8,11 +8,11 @@ footer p{
     font-weight: lighter;
 }
 
-a{
+footer a{
     color: white;
     font-weight: bold;
 }
 
-a:hover{
+footer a:hover{
     color: #3b82f6;
 }

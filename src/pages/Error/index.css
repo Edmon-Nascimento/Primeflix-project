@@ -1,0 +1,28 @@
+
+.not-found{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+    height: calc(100vh - 450px);
+}
+
+.not-found h2{
+    font-size: 4em;
+}
+
+.not-found p{
+    font-size: 1.3em;
+}
+
+.back-to-home{
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.back-to-home:hover{
+    color: white;
+}
+
