@@ -58,7 +58,7 @@ function Filme(){
             <strong>Avaliação: {filme.vote_average}/10</strong>
             <div>
                 <button>Salvar</button>
-                <button>Trailer</button>
+                <a href={`https://youtube.com/results?search_query=${filme.title} trailer`} target='_blank' rel='exeternal'><button>Trailer</button></a>
             </div>
         </div>
     )
