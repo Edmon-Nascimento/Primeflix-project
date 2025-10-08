@@ -3,6 +3,10 @@
   padding: 100px;
 }
 
+.loading h2{
+  margin-bottom: 10px;
+}
+
 .filme-info{
   display: flex;
   flex-flow: column;

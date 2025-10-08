@@ -8,6 +8,7 @@ function Filme(){
     const {id} = useParams()
     const [filme,setFilme] = useState({})
     const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(false)
 
     useEffect(()=>{
         async function loadFilme(){
@@ -21,21 +22,29 @@ function Filme(){
                 setFilme(response.data)
                 setLoading(false)
             })
-            .catch(()=>{
-
+            .catch((error)=>{
+                console.error("Erro ao carregar filme:",error)
+                setError(true)
+                setLoading(false)
             })
         }
         loadFilme()
 
-        return()=>{
-
-        }
-    },[])
+    },[id])
 
     if(loading){
         return(
             <div className="loading">
                 <h2>Carregando detalhes...</h2>
+            </div>
+        )
+    }
+
+    if (error) {
+        return (
+            <div className="loading">
+                <h2>Filme não encontrado</h2>
+                <Link to="/" className='back-to-home'>Voltar à página inicial</Link>
             </div>
         )
     }
