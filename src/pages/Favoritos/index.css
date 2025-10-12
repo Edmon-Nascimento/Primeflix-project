@@ -1,0 +1,39 @@
+.meus-favoritos{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.meus-favoritos h2{
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0 30px 0;
+
+}
+
+.meus-favoritos ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+    justify-items: center;
+    align-items: start;
+}
+
+.meus-favoritos ul li{
+    list-style: none;
+    text-align: center;
+}
+
+.meus-favoritos img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.meus-favoritos button{
+    margin: 10px 5px;
+    padding: 10px 15px;
+}

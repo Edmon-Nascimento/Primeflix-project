@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import{Link} from 'react-router-dom'
 import api from "../../services/api"
 import "./index.css"
+import { toast } from 'react-toastify'
 
 function Filme(){
     const {id} = useParams()
@@ -42,13 +43,13 @@ function Filme(){
         )
 
         if(is_salvo){
-            alert("Esse filme já está na sua lista!")
+            toast.warn("Esse filme já está na sua lista.")
             return
         }
 
         filmes_salvos.push(filme)
         localStorage.setItem("@meusfilmes", JSON.stringify(filmes_salvos))
-        alert("Filme salvo com sucesso")
+        toast.success("Filme salvo com sucesso!")
     }
 
     if(loading){
@@ -76,8 +77,8 @@ function Filme(){
             <p className='sinopse'>{filme.overview}</p>
             <strong>Avaliação: {filme.vote_average}/10</strong>
             <div>
-                <button onClick={salvarFilme}>Salvar</button>
-                <a href={`https://youtube.com/results?search_query=${filme.title} trailer`} target='_blank' rel='exeternal'><button>Trailer</button></a>
+                <button className='botao' onClick={salvarFilme}>Salvar</button>
+                <a href={`https://youtube.com/results?search_query=${filme.title} trailer`} target='_blank' rel='exeternal'><button className='botao'>Trailer</button></a>
             </div>
         </div>
     )
