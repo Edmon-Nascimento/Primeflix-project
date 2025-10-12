@@ -37,3 +37,22 @@
     margin: 10px 5px;
     padding: 10px 15px;
 }
+
+@media screen and (max-width: 800px) {
+    .meus-favoritos ul {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 1.5rem;       
+        padding: 0;             
+    }
+
+    .meus-favoritos li {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .meus-favoritos img {
+        height: 280px; 
+    }
+}

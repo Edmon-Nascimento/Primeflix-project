@@ -23,7 +23,7 @@ function Favoritos(){
     return(
         <div className="meus-favoritos">
             <h2>Favoritos</h2>
-            {filmes.length === 0 && <p className="loading">Nenhum filme salvo encontradonpm</p>}
+            {filmes.length === 0 && <p className="loading">Nenhum filme salvo encontrado</p>}
             <ul>
                 {filmes.map((filme) => {
                     return(
